@@ -63,9 +63,18 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 Container(
-                  width: 360,
+                  width: 370,
                   height: 100,
+
                   decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.lightBlueAccent,
+                        offset: const Offset(3.0, 3.0),
+                        blurRadius: 10,
+                        spreadRadius: 2.0,
+                      )
+                    ],
                       gradient: LinearGradient(colors: [
                         color.AppColor.gradientFirst,
                         color.AppColor.gradientSecond

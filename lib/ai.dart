@@ -19,6 +19,7 @@ class _questionState extends State<question> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+
         padding: const EdgeInsets.only(top: 70, left: 15, right: 30),
         child: Column(
           children: [
@@ -38,6 +39,7 @@ class _questionState extends State<question> {
               ),
               controller: textController1,
             ),
+
             ElevatedButton(onPressed: () async {
               final String aidocURL = "aidoc.loca.lt";
               print("trying to get answer to question: ");
