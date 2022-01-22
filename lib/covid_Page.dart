@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/src/webview.dart';
 import 'colors.dart' as color;
 
 class covidPage extends StatefulWidget {
@@ -14,18 +15,14 @@ class _covidPageState extends State<covidPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 15, right: 30),
         child: Column(
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Icon(Icons.home),
-            )
-          ],
-        ),
-      ),
-    );
+          WebView(
+            initialUrl = "https://www.bing.com/covid/local/india",
+          )
+
+
+
+      )
+      ));
   }
 }
