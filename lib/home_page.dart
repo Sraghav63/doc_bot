@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 Container(
-                  width: 370,
+                  width: 340,
                   height: 100,
 
                   decoration: BoxDecoration(
