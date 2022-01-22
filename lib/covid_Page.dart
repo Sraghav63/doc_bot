@@ -23,10 +23,6 @@ class _covidPageState extends State<covidPage> {
               onWebViewCreated: (WebViewController controller) {},
               javascriptMode: JavascriptMode.unrestricted,
           ))
-
-
-
-
       )
       );
   }

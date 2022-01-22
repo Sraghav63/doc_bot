@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 Text(
-                  "Covid Updates",
+                  "Covid Updates and News",
                   style: TextStyle(
                       fontSize: 20,
                       color: color.AppColor.homePageSubtitle,
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => covidPage()));
                   },
-                  child: Text('Details'),
+                  child: Text('View'),
                 )
               ],
             ),
