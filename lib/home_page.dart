@@ -6,7 +6,6 @@ import 'package:doc_bot/covid_Page.dart';
 import 'package:doc_bot/medicalnews_Page.dart';
 import 'package:get/get.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -20,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: color.AppColor.homePageBackground,
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 15, right: 30),
+        padding: const EdgeInsets.only(top: 70, left: 12, right: 20),
         child: Column(
           children: [
             Row(
@@ -62,37 +61,14 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            Row(
-              children: [
-                Text(
-                  "Medical Feed Here",
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: color.AppColor.homePageSubtitle,
-                      fontWeight: FontWeight.w700),
-                ),
-                Expanded(child: Container()),
-                SizedBox(
-                  width: 5,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => medicalnewsPage()));
-                  },
-                  child: Text('View'),
-                )
-              ],
-            ),
             SizedBox(
               height: 20,
             ),
             Row(
               children: [
                 Container(
-                  width: 340,
-                  height: 100,
-
+                  width: 370,
+                  height: 150,
                   decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
@@ -106,7 +82,11 @@ class _HomePageState extends State<HomePage> {
                         color.AppColor.gradientFirst,
                         color.AppColor.gradientSecond
                       ]),
-                      borderRadius: BorderRadius.circular(30)),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                          topRight: Radius.circular(80))),
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -118,7 +98,11 @@ class _HomePageState extends State<HomePage> {
                           shape:
                           MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(25.0),
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    bottomLeft: Radius.circular(10),
+                                    bottomRight: Radius.circular(10),
+                                    topRight: Radius.circular(80)),
                               ))),
                       child: Row(children: [
                         Text(
@@ -130,6 +114,43 @@ class _HomePageState extends State<HomePage> {
                         )
                       ])),
                 ),
+              ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: 370,
+                  height: 100,
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.lightBlueAccent,
+                      offset: const Offset(3.0, 3.0),
+                      blurRadius: 10,
+                      spreadRadius: 2.0,
+                    )
+                  ]),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        shape:
+                        MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                                borderRadius:
+                                BorderRadius.circular(10.0)))),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => medicalnewsPage()));
+                    },
+                    child: Text(
+                      'Medical News!',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                )
               ],
             ),
           ],
