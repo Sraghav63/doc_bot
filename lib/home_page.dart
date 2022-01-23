@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'colors.dart' as color;
 import 'package:doc_bot/covid_Page.dart';
+import 'package:doc_bot/medicalnews_Page.dart';
 import 'package:get/get.dart';
 
 
@@ -53,6 +54,31 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => covidPage()));
+                  },
+                  child: Text('View'),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Medical Feed Here",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: color.AppColor.homePageSubtitle,
+                      fontWeight: FontWeight.w700),
+                ),
+                Expanded(child: Container()),
+                SizedBox(
+                  width: 5,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => medicalnewsPage()));
                   },
                   child: Text('View'),
                 )
